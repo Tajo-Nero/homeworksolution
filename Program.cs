@@ -70,7 +70,12 @@ namespace Day10
         //    
         //}
         */
-
+        /* Day 8심화 과제 1.복합조건을 가진 함수 제작
+          인자값으로 정수형 하나가 주어지면, 숫자 1에서부터 인자값으로 전달받은 숫
+          자 사이의 모든 자연수 중, 3의 배수이거나 5의 배수인 수들의 합을 구하여 정수
+          형으로 반환하는 함수를 작성하세요
+        */
+        /* 심화 과제 1. 풀이
         static int Number(int num)
         {
             int strat=0;
@@ -85,9 +90,67 @@ namespace Day10
 
             return strat;
         }
+        */
+        /* Day 8 심화 과제 2. 자릿수 합 디코더 제작**
+
+            인자값으로 1이상의 수를 입력받았을 때
+            주어진 정수의 각 자리 수를 더한 결과를 정수형으로 반환하는 함수를 작성하세요.
+            예를 들어, 5611은 5+6+1+1 로 13을 반환하는 함수입니다.
+              
+         */
+        /* 문제 풀이
+        static int Number(int num)
+        {
+         int m = 0;
+            while (num != 0)
+            {
+                m += num%10;
+                num /= 10;
+                
+            
+            }
+            return m;
+        }
+        */
+        /* 심화 과제 3. 피보나치 함수 제작
+         * 피보나치 수란, 맨 첫째와 둘째 항은 각각 1이지만, 그 뒤로 오는 모든 항은 앞의 두 항의 합인
+         * 수열입니다. 예를 들어 [1,1,2,3,5,8,...] 이렇게 4번째(3) 항목은 2번째(1)와 3번째(2)의 합이고
+         * 마찬가지로 6번째(8) 항목은 바로 앞 4번째(3), 5번째(5)의 합인 형태입니다. 함수의 인자값으
+         * 로 '몇번째' 인지 정수로 건네주면, 일치하는 피보나치 수를 반환하는 함수를 제작하세요. 참
+         * 고로 11번째 피보나치 수는 89, 20번째 피보나치 수는 6765 입니다.
+        */
+        /*static int Number(int num)
+        {
+            int result = 0;
+           
+                for (int i = 0; i < 20; i++)
+                {
+                    
+
+                }
+                
+            
 
 
 
+
+
+
+            return result;
+        }
+        */
+        /* Day 9 과제 풀이
+        enum movement
+        {
+            village=1, huntingground, shop ,exit=9
+        }
+        */
+        /* Day 9과제 2.상태를 열거형으로 구현*/
+        enum movement
+        {
+            idle=1,run, walk,end=9
+        }
+        
         static void Main(string[] args)
 
         {
@@ -315,12 +378,12 @@ namespace Day10
                 inventory[i] = "";
             }
 
-           Console.Clear();
-           Console.WriteLine($"{inventorySize}개 만큼의 인벤토리가 생성되었습니다");
+            Console.Clear();
+            Console.WriteLine($"{inventorySize}개 만큼의 인벤토리가 생성되었습니다");
             int end = 0;
 
-           while (true)
-           {
+            while (true)
+            {
                 Console.Clear();
                 Console.WriteLine("열람을 원하는 번호를 입력해주세요");
                 Console.WriteLine("종료는 0번입니다");
@@ -536,14 +599,14 @@ namespace Day10
 
                }
 
-           }
+            }
 
 
-        }
+            }
 
 
 
-         */
+            */
             /*
                 //if (turnChoice == 1)
                 // {
@@ -628,9 +691,9 @@ namespace Day10
             Console.WriteLine("2.스킬사용");
             Console.WriteLine("0.종료하기");
 
-           cka = int.TryParse(Console.ReadLine(), out int choice);
-           while (true)
-           {
+            cka = int.TryParse(Console.ReadLine(), out int choice);
+            while (true)
+            {
 
                 if (cka == false)
                 {
@@ -648,7 +711,7 @@ namespace Day10
                     cka = int.TryParse(Console.ReadLine(), out choice);
                 }
                 else { break; }
-           }
+            }
 
 
             while (choice > 0)
@@ -1148,23 +1211,217 @@ namespace Day10
             //Console.WriteLine(result);
             //Console.WriteLine(mainckarjwlt);
             */
-            //심화 과제 1.복합조건을 가진 함수 제작
+            /* Day 8 심화 과제 1.복합조건을 가진 함수 제작
             //    인자값으로 정수형 하나가 주어지면, 숫자 1에서부터 인자값으로 전달받은 숫
             //    자 사이의 모든 자연수 중, 3의 배수이거나 5의 배수인 수들의 합을 구하여 정수
             //    형으로 반환하는 함수를 작성하세요
+            */
+            /*심화 과제 1.풀이
             Console.WriteLine("숫자를 입력하세요");
-            int n = Number(int.Parse(Console.ReadLine()));
-            int num =Number(n);
-            Console.WriteLine($"1부터 {n}까지 사이의 3의배수 5의 배수 더한합은 {num}");
+            int n =(int.Parse(Console.ReadLine()));
+            int m = Number(n);
+
+
+            Console.WriteLine($"1부터 {n}사이의 3의배수와 5의 배수를 더한 합 은{m} ");
+            */
+            /* Day 8 심화 과제 2. 자릿수 합 디코더 제작**
+
+            인자값으로 1이상의 수를 입력받았을 때
+            주어진 정수의 각 자리 수를 더한 결과를 정수형으로 반환하는 함수를 작성하세요.
+            예를 들어, 5611은 5+6+1+1 로 13을 반환하는 함수입니다.
+
+            */
+            /* 문제 풀이
+            Console.WriteLine("숫자를 입력하세요");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Number(n));
+            */
+            /* 심화 과제 3. 피보나치 함수 제작
+             * 피보나치 수란, 맨 첫째와 둘째 항은 각각 1이지만, 그 뒤로 오는 모든 항은 앞의 두 항의 합인
+             * 수열입니다. 예를 들어 [1,1,2,3,5,8,...] 이렇게 4번째(3) 항목은 2번째(1)와 3번째(2)의 합이고
+             * 마찬가지로 6번째(8) 항목은 바로 앞 4번째(3), 5번째(5)의 합인 형태입니다. 함수의 인자값으
+             * 로 '몇번째' 인지 정수로 건네주면, 일치하는 피보나치 수를 반환하는 함수를 제작하세요. 참
+             * 고로 11번째 피보나치 수는 89, 20번째 피보나치 수는 6765 입니다.
+            */
+            /*
+            Console.WriteLine(" 숫자 입력");
+            int m = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Number(m));
+            */
+            /* Day9 과제 1.열거형 리팩토링
+            //위 코드는 과거 스위치문을 배울 때, 적었던 코드입니다.해당
+            //코드는 스위치 문에서 1,2와 같이 숫자로만 적혀있어 가독성이
+            //떨어지는 문제를 가지고 있습니다.열거형을 활용하여 해당 코
+            드를 더욱 알아보기 쉽게 수정하여주세요.
+            */
+            /*문제 풀이
+                Console.WriteLine("이동 할 장소를 설정해주세요");
+                Console.WriteLine("1. 마을");
+                Console.WriteLine("2. 사냥터");
+                Console.WriteLine("3. 상점");
+                Console.WriteLine("9.종료");
+                movement  choices;
+                Enum.TryParse(Console.ReadLine(), out choices);
+
+                Console.Clear();
+                switch (choices)
+                {
+                    case movement.village:
+                        Console.WriteLine("마을로 이동합니다");
+                        break;
+                    case movement.huntingground:
+                        Console.WriteLine("사냥터로 이동합니다");
+                        break;
+                    case movement.shop:
+                        Console.WriteLine("상점으로 이동합니다");
+                        break;
+                    case movement.exit:
+                    Console.WriteLine("종료입니다");
+                    break;
+                    default:
+                        Console.WriteLine("1,2,3 어느것도 아니에요");
+                        break;
+                }
+
+            */
+            /* Day 9과제 2.상태를 열거형으로 구현
+            누군가가 만든 프로그램에서, 플레이어의 현재 행동이 int state 로 정의되어
+            있습니다. state변수에 1이 담겨 있으면 idle, 2가 담겨있으면 run, 3이 들어있
+            으면 walk , 9가 담겨있으면 죽은 상태 입니다. 열거형을 활용하여 해당 코드
+            를 어떻게 수정할 수 있는지 작성해주세요. 유저에게 콘솔 입력으로 1,2,3,9 
+            외의 입력이 들어오면, 옳지 못한 입력이라고 출력 후,
+            다시 입력을 요구하는 기능을 만드세요.
+            */
+
+            //1.제대로 입력이 되었다면, 예를 들어 run에 해당하는 상태가 입력되었다면 
+            //idle에서 run으로 바뀌었다는 멘트 출력
+
+            //2.이미 idle 상태였는데 idle 상태가 또 입력되면 ‘이미 idle상태입니다’ 출력 
+            //3.입력 받고 다시 무한으로 계속 진행. 9가 입력되면 ‘죽었다는 관련 멘트’ 
+
+            //나오고 무한루프 종료
+
+            //int state=1 =idle
+            //  2= run
+            //3=walk
+            //9=사망
+
+
+
+             movement character= (movement)1;
+            string[] characterstatus = new string[4];
+            // characterstatus[0] = "idle";
+            // characterstatus[1] = "run";
+            // characterstatus[2] = "walk";
+            // characterstatus[3] = "end";
+            
+            bool cka = false;
+                Console.WriteLine("행동을 선택하세요");
+                Console.WriteLine($"1.{movement.idle}");
+                Console.WriteLine($"2.{movement.run}");
+                Console.WriteLine($"3.{movement.walk}");
+                Console.WriteLine($"9.{movement.end}");
+
+                cka=int.TryParse(Console.ReadLine(), out int state);
+            while (true)
+            {
+                if (state > characterstatus.Length)
+                {
+                    Console.WriteLine("없는 선택지입니다 다시 선택해주세요");
+                    int.TryParse(Console.ReadLine(), out state);
+                }
+                else if (state < 0)
+                {
+                    Console.WriteLine("없는 선택지입니다 다시 선택해주세요");
+                    int.TryParse(Console.ReadLine(), out state);
+                }
+                else if (cka == false)
+                {
+                    Console.WriteLine("숫자로 다시 선택해주세요");
+                    int.TryParse(Console.ReadLine(), out state);
+                }
+                else { break; }
+            }
+
+
+            while (true)
+            {
+                
+                        Console.WriteLine("숫자를 선택하세요");
+                        Console.WriteLine($"1.{movement.idle}");
+                        Console.WriteLine($"2.{movement.run}");
+                        Console.WriteLine($"3.{movement.walk}");
+                        Console.WriteLine($"9.{movement.end}");
+                        int.TryParse(Console.ReadLine(), out state);
+                
+
+                switch (state)
+                {
+
+                    case (int)movement.idle:
+                        
+                        if ( characterstatus[0]!="idle")
+                        { 
+                           characterstatus[0] = "idle";
+
+                           Console.WriteLine($"{characterstatus[0]}상태입니다");
+                        }
+                        else if ( characterstatus[0] == "idle")
+                        {
+                            Console.WriteLine($"이미 {characterstatus[0]}상태입니다");
+                        }
+                        break;
+
+                    case (int)movement.run:
+                        if (characterstatus[1] != "run")
+                        {
+
+                            characterstatus[1] = "run";
+                            Console.WriteLine($"{characterstatus[1]}상태입니다");
+                        }
+                        else if (characterstatus[1] == "run")
+                        {
+                            Console.WriteLine($"이미 {characterstatus[1]}상태입니다");
+                        }
+                        break;
+
+                    case (int)movement.walk:
+                        if (characterstatus[3] != "walk")
+                        {
+
+                            characterstatus[3] = "walk";
+                            Console.WriteLine($"{characterstatus[3]}상태입니다");
+                        }
+                        else if (characterstatus[3] == "walk")
+                        {
+                            Console.WriteLine($"이미 {characterstatus[3]}상태입니다");
+                        }
+
+                        break;
+
+                    case (int)movement.end:
+                        characterstatus[3] = "";
+                        Console.WriteLine($"{characterstatus[3]}");
+                        
+
+                        break;
+                    default:
+                        
+                        
+                        break;
+                }
+                        
+
+                
+            }
 
 
 
 
 
 
-
-
-
-        }
     }
+}
 }
