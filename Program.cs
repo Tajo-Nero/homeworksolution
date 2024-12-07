@@ -1310,21 +1310,21 @@ namespace Day10
 
 
 
-             movement character= (movement)1;
+             
             string[] characterstatus = new string[4];
             // characterstatus[0] = "idle";
             // characterstatus[1] = "run";
             // characterstatus[2] = "walk";
             // characterstatus[3] = "end";
             
-            bool cka = false;
+            
                 Console.WriteLine("행동을 선택하세요");
                 Console.WriteLine($"1.{movement.idle}");
                 Console.WriteLine($"2.{movement.run}");
                 Console.WriteLine($"3.{movement.walk}");
                 Console.WriteLine($"9.{movement.end}");
 
-                cka=int.TryParse(Console.ReadLine(), out int state);
+                bool cka =int.TryParse(Console.ReadLine(), out int state);
             while (true)
             {
                 if (state > characterstatus.Length)
@@ -1344,7 +1344,7 @@ namespace Day10
                 }
                 else { break; }
             }
-
+            
 
             while (true)
             {
@@ -1355,7 +1355,7 @@ namespace Day10
                         Console.WriteLine($"3.{movement.walk}");
                         Console.WriteLine($"9.{movement.end}");
                         int.TryParse(Console.ReadLine(), out state);
-                
+                Console.WriteLine($"현재 ");
 
                 switch (state)
                 {
@@ -1365,8 +1365,8 @@ namespace Day10
                         if ( characterstatus[0]!="idle")
                         { 
                            characterstatus[0] = "idle";
-
-                           Console.WriteLine($"{characterstatus[0]}상태입니다");
+                            Console.Clear();
+                            Console.WriteLine($"{characterstatus[0]}상태입니다");
                         }
                         else if ( characterstatus[0] == "idle")
                         {
@@ -1402,15 +1402,19 @@ namespace Day10
                         break;
 
                     case (int)movement.end:
-                        characterstatus[3] = "";
-                        Console.WriteLine($"{characterstatus[3]}");
                         
+                        Console.WriteLine($"{movement.end}");
 
+                        
                         break;
                     default:
-                        
-                        
+
+                        Console.WriteLine("1,2,3,9 번중에 선택해주세요");
                         break;
+                        
+                
+                
+                
                 }
                         
 
